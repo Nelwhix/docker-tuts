@@ -24,6 +24,7 @@ if ($_ENV['APP_ENV'] !== 'production') {
 
 $whoops->register();
 
+
 // set up request/response object;
 $injector = include('Dependencies.php');
 
@@ -59,7 +60,6 @@ switch ($routeInfo[0]) {
         $class->$method($vars);
         break;
 }
-
 
 
 foreach ($response->getHeaders() as $header) {
